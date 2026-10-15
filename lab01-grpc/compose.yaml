@@ -1,0 +1,12 @@
+services:
+  calculadora:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: grpc-calculadora
+
+    ports:
+      - "50051:50051"
+
+    restart: unless-stopped
